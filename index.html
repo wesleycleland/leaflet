@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+        <title>AGFC GIS Mapper 2.1</title>
+        <link rel="SHORTCUT ICON" href="https://gis.agfc.com/WebStorage/Icons/GISLOGO.ico">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="description" content="AGFC GIS Mapper 2.1">
+        <meta name="keywords" content="AGFC, GIS, AGFC Mapper, Game and Fish Mapper">
+        <meta name="author" content="Arkansas Game and Fish Commission">
+        <meta name="google" value="notranslate">
+
+
+        <link rel="stylesheet" href="css/foundation.css">
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" href="css/leaflet.css"/>
+        <link rel="stylesheet" href="css/iconLayers.css"/ />
+
+
+
+        <!--Leaflet Libraries-->
+        <script type="text/javascript" src="js/leaflet.js"></script>
+        <script type="text/javascript" src="js/iconLayers.js"></script>
+
+</head>
+
+<body>
+    <div class="off-canvas-wrapper" style="">
+        <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+            <div class="off-canvas position-left" id="my-info" data-off-canvas data-position="left">
+                <div class="row column">
+                    <h5 class="contents"><img src="css/images/AGFClogo.png" height="25" width="40"/>&nbsp;&nbsp;Settings</h5>
+                        <ul class="vertical accordion-menu menu" data-accordion-menu>
+                            <li id="maplayers">
+                                <a href="#">Map Layers</a>
+                                    <ul class="menu vertical sublevel-1">
+                                        <li>
+                                        <label><input type="checkbox" value="" checked> </label>
+
+                                    </ul>
+                                </li>
+                            <li id="zones">
+                                <a href="#">Hunting/FishingZones</a>
+                                    <ul class="menu vertical sublevel-1">
+                                        <li>
+                                        <label><input type="checkbox" value=""> </label>
+
+                                        </li>
+                                    </ul>
+                            </li>
+                            <li id="telecheck">
+                                <a href="#">Telecheck Status</a>
+                                    <ul class="menu vertical sublevel-1">
+                                        <li>
+                                        <label><input type="checkbox" value=""> </label>
+
+                                        </li>
+                                    </ul>
+                            </li>
+                            <li id="basemap">
+                                <a href="#">Basemaps</a>
+                                    <ul class="menu vertical sublevel-1" style="padding: 10px;">
+                                        <label><img src="css/images/i_basemap.png" height="16" width="16"/> Select Basemap
+                                          <div id="basemaps"></div>
+                                        </label>
+                                    </ul>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+            <div class="off-canvas-content" data-off-canvas-content>
+                <div class="title-bar">
+                    <div class="title-bar-left">
+                        <button class="menu-icon" type="button" data-open="my-info"></button>
+                        <span class="title-bar-title">AGFC Mapper 2.1</span><br />
+                        <span class="title-bar-title show-for-large">The Arkansas Game and Fish Commission GIS Viewer</span>
+                    </div>
+                    <div class="title-bar-right show-for-large">
+                        <ul class="menu"  data-responsive-menu="drilldown medium-dropdown">
+                            <li><a style="padding-right: 1rem; padding-bottom: 0rem; padding-top: 0rem; padding-left: 1rem;" href="#"><div id="gpsTool" height="20" width="20"></div></a></li>
+
+                            <li><a data-open="about">Support</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row small-10 align-center">
+                    <div class="row">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!--Map and Body-->
+<div id="map" ></div>
+<!--End Map and Body-->
+
+<script src="js/vendor/jquery.js"></script>
+<script src="js/vendor/foundation.js"></script>
+<script src="js/app.js"></script>
+<script src="js/mapper.js"></script>
+<script src="js/basemaps.js"></script>
+<script>
+                //This resizes the map the make it responsive
+                $(window).on("resize", function () {
+                    $("#map").height($(window).height() - 100);
+                    map.invalidateSize();
+                }).trigger("resize");
+</script>
+
+</body>
+</html>
