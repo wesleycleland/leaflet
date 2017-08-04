@@ -36,17 +36,57 @@ var shadedrelief = L.layerGroup([L.tileLayer('https://server.arcgisonline.com/ar
 
 map.addLayer(street);
 
-var basemap = {
-  "Esri_WorldImagery": imagerylabels,
-  "Street": street,
-  "Delorme": delorme,
-  "World Topo Map": worldtopomap,
-  "National Geographic": natgeoworldmap,
-  "Shaded Relief": shadedrelief,
-}
-
 
 // Default Basemap Control
-controlLayer = L.control.layers(basemap,null,{collapsed:false}).addTo(map);
+// controlLayer = L.control.layers(basemap,null,{collapsed:false}).addTo(map);
 // controlLayer._container.remove();
 // document.getElementById('basemaps').appendChild(controlLayer.onAdd(map));
+
+
+var providers = {};
+
+providers['Imagery'] = {
+            title: 'Imagery', // use any string
+            layer: imagerylabels, // any ILayer
+            icon: 'css/images/basemap_imagery.jpg' // 80x80 icon
+};
+
+providers['Streets'] = {
+            title: 'Streets',
+            layer: street,
+            icon: 'css/images/basemap_streets.jpg'
+};
+
+providers['Delorme'] = {
+            title: 'Delorme', // use any string
+            layer: delorme, // any ILayer
+            icon: 'css/images/basemap_delorme.jpg' // 80x80 icon
+};
+
+providers['World Topo Map'] = {
+            title: 'World Topo Map',
+            layer: worldtopomap,
+            icon: 'css/images/basemap_topographic.jpg'
+};
+
+providers['National Geographic Map'] = {
+            title: 'National Geographic Map',
+            layer: natgeoworldmap,
+            icon: 'css/images/basemap_natgeo.jpg'
+};
+
+providers['Shaded Relief'] = {
+            title: 'Shaded Relief',
+            layer: shadedrelief,
+            icon: 'css/images/basemap_shadedrelief.jpg'
+};
+
+var layers = [];
+for (var providerId in providers) {
+    layers.push(providers[providerId]);
+}
+
+var ctrl = L.control.iconLayers(layers,{
+        position: 'topright',
+        maxLayersInRow: 3
+    }).addTo(map);
