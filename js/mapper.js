@@ -13,5 +13,6 @@
                     zoom: 8,
                     maxZoom: 18,
                     minZoom: 7,
-                    zoomControl: false
+                    zoomControl: false,
+                    loadingControl: true
                 });
