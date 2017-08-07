@@ -1,3 +1,18 @@
 .off-canvas.is-open {
     z-index: 10000;
 }
+.is-submenu-item .is-dropdown-submenu-item {
+        z-index: 10000;
+}
+
+
+.leaflet-panel-layers-item span {
+	display: block;
+	background: #fff:
+}
+.panel-thumb {
+	height: 50px;
+	width: 350px;
+	float: left;
+	cursor: pointer;
+}

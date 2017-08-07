@@ -2,12 +2,8 @@
     pointer-events: none;
 }
 
-.leaflet-iconLayers_topright {
-    background: url('images/AGFClogo.png');
-}
-
 .leaflet-iconLayers-layersRow { display: table; pointer-events: auto; }
-.leaflet-iconLayers-layerCell { display: table-cell; background-image: url('images/transparent-pixel.png'); /* ie9 fix */ } 
+.leaflet-iconLayers-layerCell { display: table-cell; background-image: url('images/transparent-pixel.png'); /* ie9 fix */ }
 
 .leaflet-iconLayers_topleft .leaflet-iconLayers-layerCell, .leaflet-iconLayers_bottomleft .leaflet-iconLayers-layerCell { padding-right: 5px; }
 .leaflet-iconLayers_topright .leaflet-iconLayers-layerCell, .leaflet-iconLayers_bottomright .leaflet-iconLayers-layerCell { padding-left: 5px; }
