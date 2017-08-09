@@ -3,7 +3,7 @@
  */
 //These are the leaflet tools
 
-
+// Spinning Circle For Map Loading
 map.spin(false);
 
 //This is the GPS feature that has the blue dot that follows you
@@ -62,7 +62,7 @@ L.Control.fileLayerLoad({
     }
 }).addTo(map);
 
-//THIS IS NOT WORKING 
+
 //This is the measurement feature
 var measureControl = L.control.measure(
     {
@@ -74,3 +74,14 @@ var measureControl = L.control.measure(
         completedColor: '#C8F2BE'
     });
 measureControl.addTo(map);
+
+// Draw Widget
+// FeatureGroup is to store editable layers
+     var drawnItems = new L.FeatureGroup();
+     map.addLayer(drawnItems);
+     var drawControl = new L.Control.Draw({
+         edit: {
+             featureGroup: drawnItems
+         }
+     });
+     map.addControl(drawControl);
