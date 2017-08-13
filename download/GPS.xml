@@ -1,0 +1,194 @@
+<?xml version="1.0"?>
+<configuration>
+
+    <selectableMapservice>http://gis.agfc.com/arcgis/rest/services/agfc/MapServer</selectableMapservice>
+    <nameField>Long Name</nameField>
+
+    <GarminCommunicatorSite>http://gis.agfc.com</GarminCommunicatorSite>	//http://www.blackboxgis.com
+    <GarminCommunicatorKey>955d4eefc66f1eed42b24851ae5bdb61</GarminCommunicatorKey>		// 683efe410204f67e4d9d0b266db2a730
+
+	<GPX_List>
+
+    <GPX_File>
+			<name>Bear Creek Lake Fish Attractors</name>
+			<description>Contains fish attractors locations.</description>
+			<url>http://gis.agfc.com/WebStorage/GPX/BEA.gpx</url>
+		</GPX_File>
+
+		<GPX_File>
+
+			<name>Blue Mountain Lake Fish Attractors</name>
+			<description>Contains fish attractors locations.</description>
+			<url>http://gis.agfc.com/WebStorage/GPX/BLM.gpx</url>
+		</GPX_File>
+
+		<GPX_File>
+			<name>Brewer Lake Fish Attractors</name>
+			<description>Contains fish attractors locations.</description>
+			<url>http://gis.agfc.com/WebStorage/GPX/BRE.gpx</url>
+		</GPX_File>
+
+		<GPX_File>
+			<name>Bull Shoals Lake Fish Attractors</name>
+			<description>Contains fish attractors locations.</description>
+			<url>http://gis.agfc.com/WebStorage/GPX/BUL.gpx</url>
+		</GPX_File>
+
+		<GPX_File>
+			<name>Beaver Lake Fish Attractors</name>
+			<description>Contains fish attractors locations.</description>
+			<url>http://gis.agfc.com/WebStorage/GPX/BVR.gpx</url>
+		</GPX_File>
+
+		<GPX_File>
+			<name>Cargile Lake Fish Attractors</name>
+			<description>Contains fish attractors locations.</description>
+			<url>http://gis.agfc.com/WebStorage/GPX/CAR.gpx</url>
+		</GPX_File>
+
+		<GPX_File>
+			<name>Chicot Lake Fish Attractors</name>
+			<description>Contains fish attractors locations.</description>
+			<url>http://gis.agfc.com/WebStorage/GPX/CHI.gpx</url>
+		</GPX_File>
+
+		<GPX_File>
+			<name>Columbia Lake Fish Attractors</name>
+			<description>Contains fish attractors locations.</description>
+			<url>http://gis.agfc.com/WebStorage/GPX/COL.gpx</url>
+		</GPX_File>
+
+		<GPX_File>
+			<name>Dardanelle Lake Fish Attractors</name>
+			<description>Contains fish attractors locations.</description>
+			<url>http://gis.agfc.com/WebStorage/GPX/DAR.gpx</url>
+		</GPX_File>
+
+		<GPX_File>
+			<name>Degray Lake Fish Attractors</name>
+			<description>Contains fish attractors locations.</description>
+			<url>http://gis.agfc.com/WebStorage/GPX/DEG.gpx</url>
+		</GPX_File>
+
+        <GPX_File>
+			<name>Dunn Lake Fish Attractors</name>
+			<description>Contains fish attractors locations.</description>
+			<url>http://gis.agfc.com/WebStorage/GPX/DUN.gpx</url>
+		</GPX_File>
+
+		<GPX_File>
+			<name>Elmdale Lake Fish Attractors</name>
+			<description>Contains fish attractors locations.</description>
+			<url>http://gis.agfc.com/WebStorage/GPX/ELM.gpx</url>
+			</GPX_File>
+
+		<GPX_File>
+			<name>Greers Ferry Lake Fish Attractors</name>
+			<description>Contains fish attractors locations.</description>
+			<url>http://gis.agfc.com/WebStorage/GPX/GRE.gpx</url>
+			</GPX_File>
+
+		<GPX_File>
+			<name>Greeson Lake Fish Attractors</name>
+			<description>Contains fish attractors locations.</description>
+			<url>http://gis.agfc.com/WebStorage/GPX/GRL.gpx</url>
+			</GPX_File>
+
+		<GPX_File>
+			<name>Hamilton Lake Fish Attractors</name>
+			<description>Contains fish attractors locations.</description>
+			<url>http://gis.agfc.com/WebStorage/GPX/HAM.gpx</url>
+		</GPX_File>
+
+		<GPX_File>
+			<name>Harris Brake Lake Fish Attractors</name>
+			<description>Contains fish attractors locations.</description>
+			<url>http://gis.agfc.com/WebStorage/GPX/HAR.gpx</url>
+		</GPX_File>
+
+        <GPX_File>
+			<name>Lake Bono Fish Attractors</name>
+			<description>Contains fish attractors locations.</description>
+			<url>http://gis.agfc.com/WebStorage/GPX/BON.gpx</url>
+		</GPX_File>
+
+		<GPX_File>
+			<name>Lake Conway Fish Attractors</name>
+			<description>Contains fish attractors locations.</description>
+			<url>http://gis.agfc.com/WebStorage/GPX/CON.gpx</url>
+		</GPX_File>
+
+		<GPX_File>
+			<name>Lower White Oak Lake Fish Attractors</name>
+			<description>Contains fish attractors locations.</description>
+			<url>http://gis.agfc.com/WebStorage/GPX/WHU.gpx</url>
+		</GPX_File>
+
+		<GPX_File>
+			<name>Maumelle Lake Fish Attractors</name>
+			<description>Contains fish attractors locations.</description>
+			<url>http://gis.agfc.com/WebStorage/GPX/MAU.gpx</url>
+		</GPX_File>
+
+		<GPX_File>
+			<name>Monticello Lake Fish Attractors</name>
+			<description>Contains fish attractors locations.</description>
+			<url>http://gis.agfc.com/WebStorage/GPX/MON.gpx</url>
+		</GPX_File>
+
+		<GPX_File>
+			<name>Nimrod Lake Fish Attractors</name>
+			<description>Contains fish attractors locations.</description>
+			<url>http://gis.agfc.com/WebStorage/GPX/NIM.gpx</url>
+		</GPX_File>
+
+		<GPX_File>
+			<name>Norfork Lake Fish Attractors</name>
+			<description>Contains fish attractors locations.</description>
+			<url>http://gis.agfc.com/WebStorage/GPX/NOR.gpx</url>
+		</GPX_File>
+
+		<GPX_File>
+			<name>Ouachita Lake Fish Attractors</name>
+			<description>Contains fish attractors locations.</description>
+			<url>http://gis.agfc.com/WebStorage/GPX/OUA.gpx</url>
+		</GPX_File>
+
+		<GPX_File>
+			<name>Overcup Lake Fish Attractors</name>
+			<description>Contains fish attractors locations.</description>
+			<url>http://gis.agfc.com/WebStorage/GPX/OVE.gpx</url>
+		</GPX_File>
+
+		<GPX_File>
+			<name>Storm Creek Lake Fish Attractors</name>
+			<description>Contains fish attractors locations.</description>
+			<url>http://gis.agfc.com/WebStorage/GPX/STO.gpx</url>
+		</GPX_File>
+
+		<GPX_File>
+			<name>Sugarloaf Lake Fish Attractors</name>
+			<description>Contains fish attractors locations.</description>
+			<url>http://gis.agfc.com/WebStorage/GPX/SUG.gpx</url>
+		</GPX_File>
+
+		<GPX_File>
+			<name>Table Rock Lake Fish Attractors</name>
+			<description>Contains fish attractors locations.</description>
+			<url>http://gis.agfc.com/WebStorage/GPX/TAB.gpx</url>
+		</GPX_File>
+
+		<GPX_File>
+			<name>Tri-County Lake Fish Attractors</name>
+			<description>Contains fish attractors locations.</description>
+			<url>http://gis.agfc.com/WebStorage/GPX/TRI.gpx</url>
+		</GPX_File>
+
+
+		<GPX_File>
+			<name>Willastein Lake Fish Attractors</name>
+			<description>Contains fish attractors locations.</description>
+			<url>http://gis.agfc.com/WebStorage/GPX/WST.gpx</url>
+		</GPX_File>
+	</GPX_List>
+</configuration>

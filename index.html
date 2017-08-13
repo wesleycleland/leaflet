@@ -121,9 +121,9 @@
                             <li><a href="#"><div id="gpsTool" ></div></a></li>
                             <li><a href="#"><img id="searchbutton" src="css/images/i_search.png" height="25" width="25"/></a></li>
                             <!--<li><a href="#"><img id="drawmeasurebutton" src="css/images/i_draw2.png" height="25" width="25"/></a></li>
-                            <li><a href="#"><img id="bookmarkbutton" src="css/images/i_bookmark.png" height="25" width="25"/></a></li>
-                            <li><a href="#"><img id="legendbutton" src="css/images/i_folder.png" height="25" width="25"/></a></li>
-                            <li><a data-toggle="toolpanel"><img src="css/images/i_tools.png" height="25" width="25"/></a></li>-->
+                            <li><a href="#"><img id="bookmarkbutton" src="css/images/i_bookmark.png" height="25" width="25"/></a></li>-->
+                            <li><a href="#"><img id="basemapsbutton" src="css/images/i_folder.png" height="25" width="25"/></a></li>
+                            <!--<li><a data-toggle="toolpanel"><img src="css/images/i_tools.png" height="25" width="25"/></a></li>-->
                             <li><a data-open="about">Support</a></li>
                         </ul>
                     </div>
@@ -137,7 +137,21 @@
     </div>
 <!--Map-->
 <div id="map" ></div>
+<div id='delete'>Delete Features</div>
+<a href='#' id='export'>Export Features</a>
+<div id='basemaps'>Basemaps</div>
 <!--End Map and Body-->
+<!--Legend Widget-->
+<div class="basemaps" style="display: none;">
+  <h2 class="contents">Legend</h2>
+  <button id="legendclose" class="close-button" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <div>
+     <div style="text-align: left;" id="legend"></div>
+  </div>
+</div>
+<!--End Legend Widget-->
 <!--Javascript Files -->
 <script src="js/vendor/jquery.js"></script>
 <script src="js/vendor/foundation.js"></script>
@@ -145,6 +159,7 @@
 <script src="js/mapper.js"></script>
 <script src="js/basemaps_esri.js"></script>
 <script src="js/widgets.js"></script>
+<script src="js/alt_esrilayers.js"></script>
 <script>
 //This resizes the map to make it responsive
 $(window).on("resize", function () {

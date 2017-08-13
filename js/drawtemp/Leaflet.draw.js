@@ -72,14 +72,6 @@ L.Draw = {};
  *  **Please note the edit toolbar is not enabled by default.**
  */
 L.drawLocal = {
-	// format: {
-	// 	numeric: {
-	// 		delimiters: {
-	// 			thousands: ',',
-	// 			decimal: '.'
-	// 		}
-	// 	}
-	// },
 	draw: {
 		toolbar: {
 			// #TODO: this should be reorganized where actions are nested in actions
@@ -101,8 +93,7 @@ L.drawLocal = {
 				polygon: 'Draw a polygon',
 				rectangle: 'Draw a rectangle',
 				circle: 'Draw a circle',
-				marker: 'Draw a marker',
-				circlemarker: 'Draw a circlemarker'
+				marker: 'Draw a marker'
 			}
 		},
 		handlers: {
@@ -111,11 +102,6 @@ L.drawLocal = {
 					start: 'Click and drag to draw circle.'
 				},
 				radius: 'Radius'
-			},
-			circlemarker: {
-				tooltip: {
-					start: 'Click map to place circle marker.'
-				}
 			},
 			marker: {
 				tooltip: {
@@ -159,10 +145,6 @@ L.drawLocal = {
 				cancel: {
 					title: 'Cancel editing, discards all changes.',
 					text: 'Cancel'
-				},
-				clearAll:{
-					title: 'clear all layers.',
-					text: 'Clear All'
 				}
 			},
 			buttons: {

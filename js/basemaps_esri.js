@@ -90,3 +90,5 @@ var ctrl = L.control.iconLayers(layers,{
         position: 'topright',
         maxLayersInRow: 3
     }).addTo(map);
+    ctrl._container.remove();
+    document.getElementById('basemaps').appendChild(ctrl.onAdd(map));
