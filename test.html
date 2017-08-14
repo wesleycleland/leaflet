@@ -1,29 +1,198 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=1024, user-scalable=no">
-    <style>
-      html { height: 100% }
-      body { height: 100%; margin: 0; padding: 0;}
-      #map{ height: 100% }
+        <title>Leaflet</title>
+        <link rel="SHORTCUT ICON" href="css/images/gps4.png">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="author" content="">
+        <meta name="google" value="notranslate">
 
-      .upStuff{
-          display:none;
-      }
-    </style>
-    <link rel="stylesheet" href="css/leaflet.css" />
+        <link rel="stylesheet" href="css/foundation.css">
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" href="css/leaflet.css"/>
+        <link rel="stylesheet" href="css/leaflet.draw.css"/>
+        <link rel="stylesheet" href="css/iconLayers.css"/>
+        <link rel="stylesheet" href="css/leaflet.mouseCoordinate.css"/>
+        <link rel="stylesheet" href="css/leaflet.zoomhome.css"/>
+        <link rel="stylesheet" href="css/leaflet-gps.css"/>
+        <link rel="stylesheet" href="css/leaflet-measure.css"/>
+        <link rel="stylesheet" href="css/Control.Geocoder.css"/>
+        <link rel="stylesheet" href="css/Control.Loading.css"/>
 
-<title>Leaflet</title></head><body>
-<div id="map"></div>
+        <!--Leaflet Libraries-->
+        <!--<script type="text/javascript" src="js/leaflet.js"></script>-->
+        <script type="text/javascript" src="https://unpkg.com/leaflet@1.0.0/dist/leaflet.js"></script>
+        <script type="text/javascript" src="js/esri-leaflet.js"></script>
+        <script type="text/javascript" src="js/iconLayers.js"></script>
+        <script type="text/javascript" src="js/leaflet.mouseCoordinate.js"></script>
+        <script type="text/javascript" src="js/leaflet.zoomhome.js"></script>
+        <script type="text/javascript" src="js/leaflet-gps.js"></script>
+        <script type="text/javascript" src="js/UTM.js"></script>
+        <script type="text/javascript" src="js/utmref.js"></script>
+        <script type="text/javascript" src="js/Control.Geocoder.js"></script>
+        <script type="text/javascript" src="js/togeojson.js"></script>
+        <script type="text/javascript" src="js/leaflet.filelayer.js"></script>
+        <script type="text/javascript" src="js/Control.Loading.js"></script>
+        <script type="text/javascript" src="js/leaflet-measure.js"></script>
+        <script type="text/javascript" src="js/leaflet.spin.min.js"></script>
 
-<script src="js/leaflet.js"></script>
-<script src="js/leaflet.hash.js"></script>
+        <!--Leaflet Draw Plugin-->
+        <script type="text/javascript" src="js/Leaflet.draw.js"></script>
+        <script type="text/javascript" src="js/Leaflet.Draw.Event.js"></script>
 
-<script src='js/require.js'></script>
-<script src='js/leaflet.spin.js'></script>
-<script src='js/mapper.js'></script>
-<script src='js/script.js'></script>
+        <script type="text/javascript" src="js/leafletdraw/Toolbar.js"></script>
+        <script type="text/javascript" src="js/leafletdraw/Tooltip.js"></script>
+
+        <script type="text/javascript" src="js/leafletdraw/ext/GeometryUtil.js"></script>
+        <script type="text/javascript" src="js/leafletdraw/ext/LatLngUtil.js"></script>
+        <script type="text/javascript" src="js/leafletdraw/ext/LineUtil.Intersect.js"></script>
+        <script type="text/javascript" src="js/leafletdraw/ext/Polygon.Intersect.js"></script>
+        <script type="text/javascript" src="js/leafletdraw/ext/Polyline.Intersect.js"></script>
+        <script type="text/javascript" src="js/leafletdraw/ext/TouchEvents.js"></script>
+
+        <script type="text/javascript" src="js/leafletdraw/draw/DrawToolbar.js"></script>
+        <script type="text/javascript" src="js/leafletdraw/draw/handler/Draw.Feature.js"></script>
+        <script type="text/javascript" src="js/leafletdraw/draw/handler/Draw.SimpleShape.js"></script>
+        <script type="text/javascript" src="js/leafletdraw/draw/handler/Draw.Polyline.js"></script>
+        <script type="text/javascript" src="js/leafletdraw/draw/handler/Draw.Marker.js"></script>
+        <script type="text/javascript" src="js/leafletdraw/draw/handler/Draw.Circle.js"></script>
+        <script type="text/javascript" src="js/leafletdraw/draw/handler/Draw.CircleMarker.js"></script>
+        <script type="text/javascript" src="js/leafletdraw/draw/handler/Draw.Polygon.js"></script>
+        <script type="text/javascript" src="js/leafletdraw/draw/handler/Draw.Rectangle.js"></script>
+
+        <script type="text/javascript" src="js/leafletdraw/edit/EditToolbar.js"></script>
+        <script type="text/javascript" src="js/leafletdraw/edit/handler/EditToolbar.Edit.js"></script>
+        <script type="text/javascript" src="js/leafletdraw/edit/handler/EditToolbar.Delete.js"></script>
+
+        <script type="text/javascript" src="js/leafletdraw/Control.Draw.js"></script>
+
+        <script type="text/javascript" src="js/leafletdraw/edit/handler/Edit.Poly.js"></script>
+        <script type="text/javascript" src="js/leafletdraw/edit/handler/Edit.SimpleShape.js"></script>
+        <script type="text/javascript" src="js/leafletdraw/edit/handler/Edit.Rectangle.js"></script>
+        <script type="text/javascript" src="js/leafletdraw/edit/handler/Edit.Marker.js"></script>
+        <script type="text/javascript" src="js/leafletdraw/edit/handler/Edit.CircleMarker.js"></script>
+        <script type="text/javascript" src="js/leafletdraw/edit/handler/Edit.Circle.js"></script>
+
+</head>
+<body>
+    <div class="off-canvas-wrapper" style="">
+        <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+            <div class="off-canvas position-left" id="my-info" data-off-canvas data-position="left">
+                <div class="row column">
+                    <ul class="tabs" data-tab>
+
+                    <h5 class="contents"><img src="css/images/gps4.png" height="25" width="40"/>&nbsp;&nbsp;Settings</h5>
+                        <ul class="tabs" data-active-collapse="true" data-tabs id="collapsing-tabs">
+                          <li class="tabs-title is-active"><a href="#panel1c" aria-selected="true">Map Layers</a></li>
+                          <li class="tabs-title"><a href="#panel2c">Tools</a></li>
+                          <!--<li class="tabs-title"><a href="#panel3c">Tab 3</a></li>-->
+                          <!--<li class="tabs-title"><a href="#panel4c">Tab 4</a></li>-->
+                        </ul>
+
+                        <div class="tabs-content" data-tabs-content="collapsing-tabs">
+                        <div class="tabs-panel is-active" id="panel1c">
+                        <ul class="vertical accordion-menu menu" data-accordion-menu>
+                            <li id="maplayers">
+                                <a href="#">Map Layers</a>
+                                    <ul class="menu vertical sublevel-1">
+                                        <li>
+                                        <label><input type="checkbox" value="" checked> </label>
+                                        </li>
+                                    </ul>
+                                </li>
+                            <li id="">
+                                <a href="#">Misc</a>
+                                    <ul class="menu vertical sublevel-1">
+                                        <li>
+                                        <label><input type="checkbox" value=""> </label>
+                                        </li>
+                                    </ul>
+                            </li>
+                            <li id="">
+                                <a href="#">Status</a>
+                                    <ul class="menu vertical sublevel-1">
+                                        <li>
+                                        <label>GPS </label>
+                                        <div id="gps">
+                                        </div>
+                                        </li>
+                                    </ul>
+                            </li>
+                        </ul>
+                        </div>
+                        <div class="tabs-panel" id="panel2c">
+                        <ul class="vertical accordion-menu menu" data-accordion-menu>
+                            <li id="maplayers">
+                                <a href="#">GPX Download</a>
+                                    <ul class="menu vertical sublevel-1">
+                                        <li>
+                                        <label><input type="checkbox" value="" checked> </label>
+                                        </li>
+                                    </ul>
+                                </li>
+                            <li id="">
+                                <a href="#">Weather</a>
+                                    <ul class="menu vertical sublevel-1">
+                                        <li>
+                                        <label><input type="checkbox" value=""> </label>
+                                        </li>
+                                    </ul>
+                            </li>
+                            <li id="">
+                                <a href="#">Print</a>
+                                    <ul class="menu vertical sublevel-1">
+                                        <li>
+                                        <label>GPS </label>
+                                        <div id="gps">
+                                        </div>
+                                        </li>
+                                    </ul>
+                            </li>
+                        </ul>
+                        </div>
+                        <!--<div class="tabs-panel" id="panel3c">-->
+                          <!--<img class="thumbnail" src="assets/img/generic/rectangle-3.jpg">-->
+                        <!--</div>-->
+                        <!--<div class="tabs-panel" id="panel4c">-->
+                          <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>-->
+                        <!--</div>-->
+                        </div>
+                        </div>
+                </div>
+            <div class="off-canvas-content" data-off-canvas-content>
+                <div class="title-bar">
+                    <div class="title-bar-left">
+                        <button class="menu-icon" type="button" data-open="my-info"></button>
+                        <span class="title-bar-title">Leaflet Mapper</span><br />
+                        <span class="title-bar-title show-for-large">GIS Viewer</span>
+                    </div>
+                    <div class="title-bar-right show-for-large">
+                        <ul class="menu"  data-responsive-menu="drilldown medium-dropdown">
+                            <li><span data-tooltip aria-haspopup="false" class="has-tip" title="Locate Me"><a href="#"><div id="gpsTool" ></div></a></span></li>
+                            <li><span data-tooltip aria-haspopup="false" class="has-tip" title="Search Data"><a href="#"><img id="searchbutton" src="css/images/i_search.png" height="25" width="25"/></a></li>
+                            <!--<li><span data-tooltip aria-haspopup="false" class="has-tip" title="Draw"><a href="#"><img id="drawmeasurebutton" src="css/images/i_draw2.png" height="25" width="25"/></a></li>
+                            <li><span data-tooltip aria-haspopup="false" class="has-tip" title="Create Bookmar"><a href="#"><img id="bookmarkbutton" src="css/images/i_bookmark.png" height="25" width="25"/></a></li>-->
+                            <li><span data-tooltip aria-haspopup="false" class="has-tip" title="Reference"><a href="#"><img id="basemapsbutton" src="css/images/i_folder.png" height="25" width="25"/></a></li>
+                            <!--<li><span data-tooltip aria-haspopup="false" class="has-tip" title="Tools"><a data-toggle="toolpanel"><img src="css/images/i_tools.png" height="25" width="25"/></a></li>-->
+                            <li><span data-tooltip aria-haspopup="false" class="has-tip" title="About The Application"><a data-open="about">Support</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row small-10 align-center">
+                    <div class="row">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--Javascript Files -->
+<script src="js/vendor/jquery.js"></script>
+<script src="js/vendor/foundation.js"></script>
+<script src="js/app.js"></script>
+
+
 </body>
 </html>
