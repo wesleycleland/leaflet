@@ -203,3 +203,54 @@ measureControl.addTo(map);
             document.getElementById('export').setAttribute('href', 'data:' + convertedData);
             document.getElementById('export').setAttribute('download','data.geojson');
         }
+
+        //Download Fish Structures
+        function get_details(){
+        // var gps=document.getElementById('gps').value;
+        // var z=xml_str.getElementsByTagName("url");
+        str1='';
+        for(i=0;i<x.length;i++){
+        if(y[i].childNodes[0].nodeValue ==gps){
+        // str1 = str1 + ' Name : ' + x[i].childNodes[0].nodeValue ;
+        // str1 = str1 + ' , url : ' + z[i].childNodes[0].nodeValue ;
+        } // end of if
+        } // end of for loop
+
+        // document.getElementById('disp').innerHTML=str1;
+        //alert(str1);
+        }
+        if (window.XMLHttpRequest)
+        { my_xml=new XMLHttpRequest();
+        }
+        else
+        {
+        my_xml=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        /////////////////////////////
+
+        my_xml.open("GET",'download/GPS.xml',false);
+        my_xml.send();
+        xml_str=my_xml.responseXML;
+
+        var x=xml_str.getElementsByTagName("name");
+        var y=xml_str.getElementsByTagName("url");
+        var str="";
+        str +="<select id='gpx' onchange=get_details()>";
+        for(i=0;i<x.length;i++){
+        str +='<option value=' + y[i].childNodes[0].nodeValue + '>' + x[i].childNodes[0].nodeValue + '</option>';
+        }
+        str +='</select>';
+
+
+        document.getElementById("gps").innerHTML = str;
+
+        $(function(){
+          // bind change event to select
+          $('#gpx').on('change', function () {
+              var url = $(this).val(); // get selected value
+              if (url) { // require a URL
+                  window.location = url; // redirect
+              }
+              return false;
+          });
+        });
