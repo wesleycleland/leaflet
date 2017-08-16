@@ -84,14 +84,14 @@
                     <ul class="tabs" data-tab>
 
                     <h5 class="contents"><img src="css/images/gps4.png" height="25" width="40"/>&nbsp;&nbsp;Settings</h5>
-                        <ul class="tabs" data-active-collapse="true" data-tabs id="collapsing-tabs">
+                        <ul class="tabs" data-active-collapse="true" data-tabs id="collapsing-tabs1">
                           <li class="tabs-title is-active"><a href="#panel1c" aria-selected="true">Map Layers</a></li>
                           <li class="tabs-title"><a href="#panel2c">Tools</a></li>
                           <!--<li class="tabs-title"><a href="#panel3c">Tab 3</a></li>-->
                           <!--<li class="tabs-title"><a href="#panel4c">Tab 4</a></li>-->
                         </ul>
 
-                        <div class="tabs-content" data-tabs-content="collapsing-tabs">
+                        <div class="tabs-content" data-tabs-content="collapsing-tabs1">
                         <div class="tabs-panel is-active" id="panel1c">
                         <ul class="vertical accordion-menu menu" data-accordion-menu>
                             <li id="maplayers">
@@ -102,7 +102,7 @@
                                         </li>
                                     </ul>
                                 </li>
-                            <li id="">
+                            <li id="misc">
                                 <a href="#">Misc</a>
                                     <ul class="menu vertical sublevel-1">
                                         <li>
@@ -110,13 +110,11 @@
                                         </li>
                                     </ul>
                             </li>
-                            <li id="">
+                            <li id="status">
                                 <a href="#">Status</a>
                                     <ul class="menu vertical sublevel-1">
                                         <li>
-                                        <label>GPS </label>
-                                        <div id="gps">
-                                        </div>
+                                        <label> </label>
                                         </li>
                                     </ul>
                             </li>
@@ -124,15 +122,35 @@
                         </div>
                         <div class="tabs-panel" id="panel2c">
                         <ul class="vertical accordion-menu menu" data-accordion-menu>
-                            <li id="maplayers">
-                                <a href="#">GPX Download</a>
+                            <li id="tools">
+                                <a href="#">Feature Download</a>
                                     <ul class="menu vertical sublevel-1">
-                                        <li>
-                                        <label><input type="checkbox" value="" checked> </label>
-                                        </li>
+                                        <ul class="tabs" data-tab>
+                                            <ul class="tabs" data-active-collapse="true" data-tabs id="collapsing-tabs">
+                                                <li class="tabs-title is-active"><a href="#panel1d" aria-selected="true">Garmin</a></li>
+                                                <li class="tabs-title"><a href="#panel2d">Lowrance</a></li>
+                                                <li class="tabs-title"><a href="#panel3d">Hummingbird</a></li>
+                                                <!--<li class="tabs-title"><a href="#panel4d">Tab 4</a></li>-->
+                                            </ul>
+
+                                            <div class="tabs-content" data-tabs-content="collapsing-tabs">
+                                                <div class="tabs-panel is-active" id="panel1d">
+                                                    <p id="gps"></p>
+                                                </div>
+                                                <div class="tabs-panel" id="panel2d">
+                                                    <p>Lowrance</p>
+                                                </div>
+                                                <div class="tabs-panel" id="panel3d">
+                                                    <p>Hummingbird</p>
+                                                </div>
+                                                <!--<div class="tabs-panel" id="panel4d">-->
+                                                    <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>-->
+                                                <!--</div>-->
+                                            </div>
+                                        </ul>
                                     </ul>
                                 </li>
-                            <li id="">
+                            <li id="weather">
                                 <a href="#">Weather</a>
                                     <ul class="menu vertical sublevel-1">
                                         <li>
@@ -140,14 +158,10 @@
                                         </li>
                                     </ul>
                             </li>
-                            <li id="">
+                            <li id="print">
                                 <a href="#">Print</a>
                                     <ul class="menu vertical sublevel-1">
-                                        <li>
-                                        <label>GPS </label>
-                                        <div id="gps">
-                                        </div>
-                                        </li>
+                                        <p>Printing</p>
                                     </ul>
                             </li>
                         </ul>
@@ -159,8 +173,9 @@
                           <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>-->
                         <!--</div>-->
                         </div>
-                        </div>
+                    </ul>
                 </div>
+            </div>
             <div class="off-canvas-content" data-off-canvas-content>
                 <div class="title-bar">
                     <div class="title-bar-left">
@@ -171,12 +186,12 @@
                     <div class="title-bar-right show-for-large">
                         <ul class="menu"  data-responsive-menu="drilldown medium-dropdown">
                             <li><span data-tooltip aria-haspopup="false" class="has-tip" title="Locate Me"><a href="#"><div id="gpsTool" ></div></a></span></li>
-                            <li><span data-tooltip aria-haspopup="false" class="has-tip" title="Search Data"><a href="#"><img id="searchbutton" src="css/images/i_search.png" height="25" width="25"/></a></li>
-                            <!--<li><span data-tooltip aria-haspopup="false" class="has-tip" title="Draw"><a href="#"><img id="drawmeasurebutton" src="css/images/i_draw2.png" height="25" width="25"/></a></li>
-                            <li><span data-tooltip aria-haspopup="false" class="has-tip" title="Create Bookmar"><a href="#"><img id="bookmarkbutton" src="css/images/i_bookmark.png" height="25" width="25"/></a></li>-->
-                            <li><span data-tooltip aria-haspopup="false" class="has-tip" title="Reference"><a href="#"><img id="basemapsbutton" src="css/images/i_folder.png" height="25" width="25"/></a></li>
-                            <!--<li><span data-tooltip aria-haspopup="false" class="has-tip" title="Tools"><a data-toggle="toolpanel"><img src="css/images/i_tools.png" height="25" width="25"/></a></li>-->
-                            <li><span data-tooltip aria-haspopup="false" class="has-tip" title="About The Application"><a data-open="about">Support</a></li>
+                            <li><span data-tooltip aria-haspopup="false" class="has-tip" title="Search Data"><a href="#"><img id="searchbutton" src="css/images/i_search.png" height="25" width="25"/></a></span></li>
+                            <!--<li><span data-tooltip aria-haspopup="false" class="has-tip" title="Draw"><a href="#"><img id="drawmeasurebutton" src="css/images/i_draw2.png" height="25" width="25"/></a></span></li>
+                            <li><span data-tooltip aria-haspopup="false" class="has-tip" title="Create Bookmar"><a href="#"><img id="bookmarkbutton" src="css/images/i_bookmark.png" height="25" width="25"/></a></span></li>-->
+                            <li><span data-tooltip aria-haspopup="false" class="has-tip" title="Reference"><a href="#"><img id="basemapsbutton" src="css/images/i_folder.png" height="25" width="25"/></a></span></li>
+                            <!--<li><span data-tooltip aria-haspopup="false" class="has-tip" title="Tools"><a data-toggle="toolpanel"><img src="css/images/i_tools.png" height="25" width="25"/></a></span></li>-->
+                            <li><span data-tooltip aria-haspopup="false" class="has-tip" title="About The Application"><a data-open="about">Support</a></span></li>
                         </ul>
                     </div>
                 </div>
@@ -211,7 +226,7 @@
 <script src="js/mapper.js"></script>
 <script src="js/basemaps_esri.js"></script>
 <script src="js/widgets.js"></script>
-<script src="js/wmslayers.js"></script>
+<!--<script src="js/wmslayers.js"></script>-->
 <script>
 //This resizes the map to make it responsive
 $(window).on("resize", function () {
